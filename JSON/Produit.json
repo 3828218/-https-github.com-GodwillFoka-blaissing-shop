@@ -1,0 +1,37 @@
+{
+    "fields": [
+        {
+            "name": "nom",
+            "type": "string"
+        },
+        {
+            "name": "descrition",
+            "type": "text"
+        },
+        {
+            "name": "categorie_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "categorie_id",
+            "references": "id",
+            "on": "categories",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "categorie",
+            "type": "belongsTo",
+            "class": "App\\Models\\Categorie"
+        }
+    ],
+    "validations": [
+        {
+            "field": "title",
+            "rules": "required|max:10"
+        }
+    ]
+}
