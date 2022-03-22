@@ -32,7 +32,7 @@
                         height="55" /></a>
                 <div id="page-title">
                     <h1>Kollin'Shop</h1>
-                    <h2>La boutique de l'heure</h2>
+                    <h2>Kollin'Shop Boutique Mon vêtement, Ma marque</h2>
                 </div>
             </div>
         </header>
