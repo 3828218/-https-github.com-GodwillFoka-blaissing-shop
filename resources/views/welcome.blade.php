@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Modern Modular Gift Shop E-Commerce HTML Website Template" />
-    <meta name="author" content="Mohammad Ahmadian" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="icon" type="image/png" href="{{ asset('assets/images/logo-1.png') }}" />
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}" />
