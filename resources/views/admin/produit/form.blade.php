@@ -17,10 +17,10 @@
     <textarea class="form-control" rows="5" name="descrition" type="textarea" id="descrition" >{{ isset($produit->descrition) ? $produit->descrition : ''}}</textarea>
     {!! $errors->first('descrition', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('categorie_id') ? 'has-error' : ''}}">
-    <label for="categorie_id" class="control-label">{{ 'Categorie Id' }}</label>
-    <input class="form-control" name="categorie_id" type="number" id="categorie_id" value="{{ isset($produit->categorie_id) ? $produit->categorie_id : ''}}" required>
-    {!! $errors->first('categorie_id', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('cathegorie_id') ? 'has-error' : ''}}">
+    <label for="cathegorie_id" class="control-label">{{ 'Cathegorie Id' }}</label>
+    <input class="form-control" name="cathegorie_id" type="number" id="cathegorie_id" value="{{ isset($produit->cathegorie_id) ? $produit->cathegorie_id : ''}}" >
+    {!! $errors->first('cathegorie_id', '<p class="help-block">:message</p>') !!}
 </div>
 
 

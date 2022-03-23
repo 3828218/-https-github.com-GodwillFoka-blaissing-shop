@@ -18,23 +18,23 @@
             "type": "text"
         },
         {
-            "name": "categorie_id",
+            "name": "cathegorie_id",
             "type": "integer#unsigned"
         }
     ],
     "foreign_keys": [
         {
-            "column": "categorie_id",
+            "column": "cathegorie_id",
             "references": "id",
-            "on": "categories",
+            "on": "cathegories",
             "onDelete": "cascade"
         }
     ],
     "relationships": [
         {
-            "name": "categorie",
+            "name": "cathegorie",
             "type": "belongsTo",
-            "class": "App\\Models\\Categorie"
+            "class": "App\\Models\\Cathegorie"
         }
     ],
     "validations": [

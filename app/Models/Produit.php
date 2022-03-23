@@ -25,11 +25,11 @@ class Produit extends Model
      *
      * @var array
      */
-    protected $fillable = ['nom', 'etat', 'descrition', 'categorie_id'];
+    protected $fillable = ['nom', 'etat', 'descrition', 'cathegorie_id'];
 
-    public function categorie()
+    public function cathegorie()
     {
-        return $this->belongsTo('App\Models\Categorie');
+        return $this->belongsTo('App\Models\Cathegorie');
     }
     
 }

@@ -18,8 +18,8 @@ class CreateProduitsTable extends Migration
             $table->string('nom')->nullable();
             $table->string('etat');
             $table->text('descrition')->nullable();
-            $table->integer('categorie_id')->unsigned();
-            $table->foreign('categorie_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('cathegorie_id')->unsigned();
+            $table->foreign('cathegorie_id')->references('id')->on('cathegories')->onDelete('cascade')->onUpdate('cascade');
             });
     }
 

@@ -51,3 +51,6 @@ Route::group(['middleware' => ['auth']] ,function(){
 // Route::resource('admin/cathegorie', 'App\Http\Controllers\Admin\CathegorieController');
 // Route::resource('admin/produit', 'App\Http\Controllers\Admin\ProduitController');
 
+
+Route::resource('admin/produit', 'App\Http\Controllers\Admin\ProduitController');
+Route::resource('admin/produit', 'App\Http\Controllers\Admin\ProduitController');

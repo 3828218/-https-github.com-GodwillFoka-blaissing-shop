@@ -24,7 +24,7 @@ class ProduitController extends Controller
             $produit = Produit::where('nom', 'LIKE', "%$keyword%")
                 ->orWhere('etat', 'LIKE', "%$keyword%")
                 ->orWhere('descrition', 'LIKE', "%$keyword%")
-                ->orWhere('categorie_id', 'LIKE', "%$keyword%")
+                ->orWhere('cathegorie_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $produit = Produit::latest()->paginate($perPage);
