@@ -5,6 +5,15 @@
             "type": "string"
         },
         {
+            "name": "etat",
+            "type": "select",
+            "options": {
+                "En Stock": "En Stock",
+                "Solde": "Solde",
+                "Stock Epuisé": "Stock Epuisé"
+            }
+        },
+        {
             "name": "descrition",
             "type": "text"
         },
@@ -30,8 +39,16 @@
     ],
     "validations": [
         {
-            "field": "title",
-            "rules": "required|max:10"
+            "field": "nom",
+            "rules": "required"
+        },
+        {
+            "field": "etat",
+            "rules": "required"
+        },
+        {
+            "field": "categorie_id",
+            "rules": "required"
         }
     ]
 }

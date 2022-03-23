@@ -8,5 +8,11 @@
             "name": "description",
             "type": "text"
         }
+    ],
+    "validations": [
+        {
+            "field": "nom",
+            "rules": "required"
+        }
     ]
 }
