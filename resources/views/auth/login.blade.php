@@ -55,12 +55,12 @@
                                                 class="form-check-label">{{ __('Me garder connecté') }}</label></div>
                                         <div class="divider"></div>
                                         <h6 class="mb-0">{{ __('Vous n\'avez pas de compte?') }} <a
-                                                href="{{ route('password.request') }}"
+                                                href="{{ route('register') }}"
                                                 class="text-primary">{{ __('Créez un compte') }}</a></h6>
                                         <div class="modal-footer clearfix">
                                             @if (Route::has('password.request'))
                                                 <div class="float-left"><a href="{{ route('password.request') }}"
-                                                        class="btn-lg btn btn-link">Mot de passe oublié
+                                                        class="btn-lg btn btn-link">
                                                         {{ __('Mot de passe oublié') }}</a></div>
                                             @endif
                                             <div class="float-right">

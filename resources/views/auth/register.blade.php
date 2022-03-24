@@ -1,59 +1,90 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!doctype html>
+<html lang="en">
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Kollin'Shop | Administration</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="ArchitectUI HTML Bootstrap 4 Dashboard Template">
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
+    <link href="{{ asset('assets/assets/styleAdmin.css') }}" rel="stylesheet">
+</head>
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow">
+        <div class="app-container">
+            <div class="h-100 bg-plum-plate bg-animation">
+                <div class="d-flex h-100 justify-content-center align-items-center">
+                    <div class="mx-auto app-login-box col-md-8">
+                        <div class="app-logo-inverse mx-auto mb-3"></div>
+                        <div class="modal-dialog w-100 mx-auto">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="h5 modal-title text-center">
+                                        <h4 class="mt-2">
+                                            <div>Bienvenu Sur La Partie D'administration</div>
+                                            <span>Remplir le formulaire</span>
+                                        </h4>
+                                    </div>
+                                    <form method="POST" action="{{ route('register') }}">
+                                        @csrf
+                                        <div class="form-row">
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group"><input name="name"
+                                                        id="exampleName" placeholder="Nom Complet" type="name"
+                                                        required autofocus class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group"><input name="email"
+                                                        id="exampleEmail" placeholder="Email" type="email"
+                                                        required class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group"><input name="password"
+                                                        id="examplePassword" placeholder="Mot De Passe" required
+                                                        type="password"
+                                                        class="form-control"></div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group"><input name="password_confirmation"
+                                                        id="examplePasswordConfirmation" placeholder="Confirmation Mot De Passe" required
+                                                        type="password"
+                                                        class="form-control"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer clearfix">
+                                            @if (Route::has('password.request'))
+                                                <div class="float-left"><a href="{{ route('login') }}"
+                                                        class="btn-lg btn btn-link">
+                                                        {{ __('J\'ai déjà un compte') }}</a></div>
+                                            @endif
+                                            <div class="float-right">
+                                                <button type="submit"
+                                                    class="btn btn-primary btn-lg">{{ __('Ceer Un Compte') }}</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center text-white opacity-8 mt-3">Fait Par <a style="color: white"
+                                href="https:::wa.me/+237691424882"><b>Mc Compagny</b></a> 2022 </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ asset('assets/assets/scriptAdmin.js') }}"></script>
+</body>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+</html>
