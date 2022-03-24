@@ -864,7 +864,10 @@
                                                         </div>
                                                     </div>
                                                     <div class="widget-content-right mr-2">
-                                                        <a href="{{ route('logout') }}" class="btn-pill btn-shadow btn-shine btn btn-focus">Logout</a>
+                                                        <form method="POST" action="{{ route('logout') }}">
+                                                            @csrf
+                                                            <button class="btn-pill btn-shadow btn-shine btn btn-focus">Logout</button>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>
