@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
 
 Route::get('/', function () {
     return view('welcome');
 });
-require __DIR__.'/auth.php';
 Route::group(['middleware' => ['auth']] ,function(){
     Route::group(['prefix'=>'/admin'], function(){
         Route::group(['prefix'=>'/produit'], function(){
@@ -42,11 +46,6 @@ Route::group(['middleware' => ['auth']] ,function(){
     });
 });
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
-
-// require __DIR__.'/auth.php';
 
 // Route::resource('admin/cathegorie', 'App\Http\Controllers\Admin\CathegorieController');
 // Route::resource('admin/produit', 'App\Http\Controllers\Admin\ProduitController');
