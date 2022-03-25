@@ -34,20 +34,12 @@
             <div class="widget-content p-0">
                 <div class="widget-content-wrapper">
                     <div class="widget-content-left">
-                        <div class="btn-group row">
-                            <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                        <div class="btn-group">
+                            <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                class="p-0 btn">
                                 <img width="42" class="rounded-circle"
                                     src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
                                 <i class="fa fa-angle-down ml-2 opacity-8"></i>
-
-                                <div class="widget-content-left  ml-3 header-user-info">
-                                    <div class="widget-heading">
-                                        {{ Auth::user()->name }}
-                                    </div>
-                                    <div class="widget-subheading">
-                                        {{ Auth::user()->email }}
-                                    </div>
-                                </div>
                             </a>
                             <div tabindex="-1" role="menu" aria-hidden="true"
                                 class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
@@ -63,10 +55,9 @@
                                                         <img width="42" class="rounded-circle"
                                                             src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
                                                         <div class="widget-content-left">
-                                                            <div class="widget-heading">Alina Mcloughlin
+                                                            <div class="widget-heading">{{ Auth::user()->name }}
                                                             </div>
-                                                            <div class="widget-subheading opacity-8">A short
-                                                                profile description
+                                                            <div class="widget-subheading opacity-8">{{ Auth::user()->email }}
                                                             </div>
                                                         </div>
                                                         <div class="widget-content-right mr-2">
@@ -152,6 +143,14 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                    <div class="widget-content-left  ml-3 header-user-info">
+                        <div class="widget-heading">
+                            {{ Auth::user()->name }}
+                        </div>
+                        <div class="widget-subheading">
+                            {{ Auth::user()->email }}
                         </div>
                     </div>
                 </div>
