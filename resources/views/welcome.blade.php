@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Kollin'Shop</title>
     <link href="{{ asset('assets/styleAdmin.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{asset('assets/images/ks3.png')}}">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
             <div class="app-header header-shadow">
                 <div class="app-header__logo">
-                    <div class="logo-src"></div>Kollin'Shop
+                    <div class="logo-src"></div><span style="margin-top: 3%; font-weight: bold; font-size: 25px; margin-left: 20px;">Kollin'Shop</span>
                     <div class="header__pane ml-auto">
                         <div>
                             <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
@@ -88,157 +89,25 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading">Menu</li>
                                 <li>
-                                    <a href="components-carousel.html#">
+                                    <a href="#">
                                         <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Dashboards
+                                        Nouveau Produits
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="index.html">
-                                                <i class="metismenu-icon">
-                                                </i>Analytics
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="dashboards-commerce.html">
-                                                <i class="metismenu-icon">
-                                                </i>Commerce
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="dashboards-sales.html">
-                                                <i class="metismenu-icon">
-                                                </i>Sales
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-carousel.html#">
-                                                <i class="metismenu-icon"></i>
-                                                Minimal
-                                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                            </a>
-                                            <ul>
-                                                <li>
-                                                    <a href="dashboards-minimal-1.html">
-                                                        <i class="metismenu-icon">
-                                                        </i>Variation 1
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="dashboards-minimal-2.html">
-                                                        <i class="metismenu-icon">
-                                                        </i>Variation 2
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="dashboards-crm.html">
-                                                <i class="metismenu-icon"></i>
-                                                CRM
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li>
-                                    <a href="components-carousel.html#">
+                                    <a href="#">
                                         <i class="metismenu-icon pe-7s-browser"></i>
-                                        Pages
+                                        Style Homme
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="pages-login.html">
-                                                <i class="metismenu-icon"></i>
-                                                Login
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-login-boxed.html">
-                                                <i class="metismenu-icon">
-                                                </i>Login Boxed
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-register.html">
-                                                <i class="metismenu-icon">
-                                                </i>Register
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-register-boxed.html">
-                                                <i class="metismenu-icon">
-                                                </i>Register Boxed
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-forgot-password.html">
-                                                <i class="metismenu-icon">
-                                                </i>Forgot Password
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="pages-forgot-password-boxed.html">
-                                                <i class="metismenu-icon">
-                                                </i>Forgot Password Boxed
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li>
-                                    <a href="components-carousel.html#">
+                                    <a href="#">
                                         <i class="metismenu-icon pe-7s-plugin"></i>
-                                        Applications
+                                        Style Femme
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
-                                    <ul>
-                                        <li>
-                                            <a href="apps-mailbox.html">
-                                                <i class="metismenu-icon">
-                                                </i>Mailbox
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="apps-chat.html">
-                                                <i class="metismenu-icon">
-                                                </i>Chat
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="apps-faq-section.html">
-                                                <i class="metismenu-icon">
-                                                </i>FAQ Section
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-carousel.html#">
-                                                <i class="metismenu-icon"></i>
-                                                Forums
-                                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                            </a>
-                                            <ul>
-                                                <li>
-                                                    <a href="apps-forum-list.html">
-                                                        <i class="metismenu-icon">
-                                                        </i>Forum Listing
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="apps-forum-threads.html">
-                                                        <i class="metismenu-icon">
-                                                        </i>Forum Threads
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="apps-forum-discussion.html">
-                                                        <i class="metismenu-icon">
-                                                        </i>Forum Discussion
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -250,8 +119,7 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <i class="pe-7s-album icon-gradient bg-sunny-morning">
-                                        </i>
+                                        <img src="{{asset('assets/images/ks3.png')}}" width="100%" alt="">
                                     </div>
                                     <div>KOLLIN'SHOP
                                         <div class="page-title-subheading">Mon vêtement, Ma marque
@@ -266,7 +134,7 @@
                                     <div class="col-12">
                                         <div class="main-card mb-3 card">
                                             <div class="card-body">
-                                                <h5 class="card-title">Full width Slider</h5>
+                                                <h5 class="card-title">Nouveautés</h5>
                                                 <div class="slick-slider">
                                                     <div>
                                                         <div class="slider-item">1</div>
@@ -305,7 +173,7 @@
                                     <div class="col-12">
                                         <div class="main-card mb-3 card">
                                             <div class="card-body">
-                                                <h5 class="card-title">Variable Width</h5>
+                                                <h5 class="card-title">Style Homme</h5>
                                                 <div class="slick-slider-variable">
                                                     <div>
                                                         <div class="slider-item" style="width: 100px">
@@ -344,7 +212,163 @@
                                     <div class="col-12">
                                         <div class="main-card mb-3 card">
                                             <div class="card-body">
-                                                <h5 class="card-title">Responsive</h5>
+                                                <h5 class="card-title">Style Femme</h5>
+                                                <div class="slick-slider-variable">
+                                                    <div>
+                                                        <div class="slider-item" style="width: 100px">
+                                                            <p>100</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 200px">
+                                                            <p>200</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 75px">
+                                                            <p>75</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 300px">
+                                                            <p>300</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 225px">
+                                                            <p>225</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 175px">
+                                                            <p>175</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Style Enfants</h5>
+                                                <div class="slick-slider-variable">
+                                                    <div>
+                                                        <div class="slider-item" style="width: 100px">
+                                                            <p>100</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 200px">
+                                                            <p>200</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 75px">
+                                                            <p>75</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 300px">
+                                                            <p>300</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 225px">
+                                                            <p>225</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item" style="width: 175px">
+                                                            <p>175</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Habille</h5>
+                                                <div class="slick-slider-responsive">
+                                                    <div>
+                                                        <div class="slider-item">1</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">2</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">3</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">4</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">5</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">6</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">7</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">8</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">9</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">10</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Chaussure</h5>
+                                                <div class="slick-slider-responsive">
+                                                    <div>
+                                                        <div class="slider-item">1</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">2</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">3</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">4</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">5</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">6</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">7</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">8</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">9</div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="slider-item">10</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="main-card mb-3 card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Perruque</h5>
                                                 <div class="slick-slider-responsive">
                                                     <div>
                                                         <div class="slider-item">1</div>
@@ -381,108 +405,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="main-card mb-3 card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Basic Bootstrap 4 Carousel</h5>
-                                                <div id="carouselExampleControls1" class="carousel slide"
-                                                    data-ride="carousel">
-                                                    <div class="carousel-inner">
-                                                        <div class="carousel-item active">
-                                                            <img class="d-block w-100"
-                                                                src="https://via.placeholder.com/800x400"
-                                                                alt="First slide">
-                                                        </div>
-                                                        <div class="carousel-item">
-                                                            <img class="d-block w-100"
-                                                                src="https://via.placeholder.com/800x400"
-                                                                alt="Second slide">
-                                                        </div>
-                                                        <div class="carousel-item">
-                                                            <img class="d-block w-100"
-                                                                src="https://via.placeholder.com/800x400"
-                                                                alt="Third slide">
-                                                        </div>
-                                                    </div>
-                                                    <a class="carousel-control-prev"
-                                                        href="components-carousel.html#carouselExampleControls1"
-                                                        role="button" data-slide="prev">
-                                                        <span class="carousel-control-prev-icon"
-                                                            aria-hidden="true"></span>
-                                                        <span class="sr-only">Previous</span>
-                                                    </a>
-                                                    <a class="carousel-control-next"
-                                                        href="components-carousel.html#carouselExampleControls1"
-                                                        role="button" data-slide="next">
-                                                        <span class="carousel-control-next-icon"
-                                                            aria-hidden="true"></span>
-                                                        <span class="sr-only">Next</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="main-card mb-3 card">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Carousel with Captions</h5>
-                                                <div id="carouselExampleControls2" class="carousel slide carousel-fade"
-                                                    data-ride="carousel">
-                                                    <div class="carousel-inner">
-                                                        <div class="carousel-item active">
-                                                            <img class="d-block w-100"
-                                                                src="https://via.placeholder.com/800x400"
-                                                                alt="First slide">
-                                                            <div class="carousel-caption d-none d-md-block">
-                                                                <h5>First Slide</h5>
-                                                                <p>Praesent commodo cursus magna, vel scelerisque nisl
-                                                                    consectetur.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="carousel-item">
-                                                            <img class="d-block w-100"
-                                                                src="https://via.placeholder.com/800x400"
-                                                                alt="Second slide">
-                                                            <div class="carousel-caption d-none d-md-block">
-                                                                <h5>Second Slide</h5>
-                                                                <p>Nulla vitae elit libero, a pharetra augue mollis
-                                                                    interdum.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="carousel-item">
-                                                            <img class="d-block w-100"
-                                                                src="https://via.placeholder.com/800x400"
-                                                                alt="Third slide">
-                                                            <div class="carousel-caption d-none d-md-block">
-                                                                <h5>Third Slide</h5>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                                    elit.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <a class="carousel-control-prev"
-                                                        href="components-carousel.html#carouselExampleControls2"
-                                                        role="button" data-slide="prev">
-                                                        <span class="carousel-control-prev-icon"
-                                                            aria-hidden="true"></span>
-                                                        <span class="sr-only">Previous</span>
-                                                    </a>
-                                                    <a class="carousel-control-next"
-                                                        href="components-carousel.html#carouselExampleControls2"
-                                                        role="button" data-slide="next">
-                                                        <span class="carousel-control-next-icon"
-                                                            aria-hidden="true"></span>
-                                                        <span class="sr-only">Next</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>

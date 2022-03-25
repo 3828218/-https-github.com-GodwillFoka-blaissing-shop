@@ -13,7 +13,8 @@
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <link href="{{ asset('assets/assets/styleAdmin.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/styleAdmin.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{asset('assets/images/ks3.png')}}">
 </head>
 
 <body>
@@ -83,7 +84,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="{{ asset('assets/assets/scriptAdmin.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/scriptAdmin.js') }}"></script>
 </body>
 
 </html>
