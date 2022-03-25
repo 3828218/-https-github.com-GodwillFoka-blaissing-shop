@@ -40,6 +40,11 @@
                                                         id="exampleEmail" placeholder="Email" type="email"
                                                         :value="old('email')" required autofocus class="form-control">
                                                 </div>
+                                                @error('email')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $errors }}</strong>
+                                                    </span>
+                                                @enderror
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group"><input name="password"
