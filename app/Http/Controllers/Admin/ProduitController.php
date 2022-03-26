@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class ProduitController extends Controller
 {
+    public function listing()
+    {
+        $produits = Produit::all();
+        return view('welcome', compact('produits'));
+    }
     /**
      * Display a listing of the resource.
      *
