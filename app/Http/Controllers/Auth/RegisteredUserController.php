@@ -39,9 +39,15 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        if ($request->hasFile('image')) {
+            $requestData['image'] = $request->file('image')
+                ->store('uploads', 'public');
+        }
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'image' => $request->image,
             'password' => Hash::make($request->password),
         ]);
 

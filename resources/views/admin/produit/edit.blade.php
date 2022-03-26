@@ -24,7 +24,7 @@
                             {{ method_field('PATCH') }}
                             {{ csrf_field() }}
 
-                            @include ('admin.produit.form', ['formMode' => 'edit'])
+                            @include ('admin.produit.form', ['formMode' => 'Modifer'])
 
                         </form>
 

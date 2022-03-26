@@ -28,7 +28,7 @@
                             'files' => true
                         ]) !!}
 
-                        @include ('%%viewTemplateDir%%.form', ['formMode' => 'edit'])
+                        @include ('%%viewTemplateDir%%.form', ['formMode' => 'Modifer'])
 
                         {!! Form::close() !!}
 

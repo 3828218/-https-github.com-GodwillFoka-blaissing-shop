@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kollin'Shop</title>
     <link href="{{ asset('assets/styleAdmin.css') }}" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="{{asset('assets/images/ks3.png')}}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/ks3.png') }}">
 </head>
 
 <body>
@@ -16,7 +16,8 @@
         <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
             <div class="app-header header-shadow">
                 <div class="app-header__logo">
-                    <div class="logo-src"></div><span style="margin-top: 3%; font-weight: bold; font-size: 25px; margin-left: 20px;">Kollin'Shop</span>
+                    <div class="logo-src"></div><span
+                        style="margin-top: 3%; font-weight: bold; font-size: 25px; margin-left: 20px;">Kollin'Shop</span>
                     <div class="header__pane ml-auto">
                         <div>
                             <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
@@ -119,7 +120,7 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <img src="{{asset('assets/images/ks3.png')}}" width="100%" alt="">
+                                        <img src="{{ asset('assets/images/ks3.png') }}" width="100%" alt="">
                                     </div>
                                     <div>KOLLIN'SHOP
                                         <div class="page-title-subheading">Mon vêtement, Ma marque
@@ -175,6 +176,29 @@
                                             <div class="card-body">
                                                 <h5 class="card-title">Style Homme</h5>
                                                 <div class="slick-slider-variable">
+                                                    {{-- @foreach ($produits as $item)
+                                                        <div>
+                                                            <div class="dropdown-menu-header slider-item">
+                                                                <div class="dropdown-menu-header-inner bg-amy-crisp">
+                                                                    <div class="menu-header-image"
+                                                                        style="background-image: url('assets/images/sidebar/abstract3.jpg');">
+                                                                    </div>
+                                                                    <div class="menu-header-content">
+                                                                        <div>
+                                                                            <h5 class="menu-header-title">
+                                                                                {{ $item->nom }}
+                                                                            </h5>
+                                                                            <div>
+                                                                                ({{ $item->etat }})
+                                                                                <h6 class="menu-header-subtitle">
+                                                                                    {{ $item->descrition }}</h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    @endforeach --}}
                                                     <div>
                                                         <div class="slider-item" style="width: 100px">
                                                             <p>100</p>

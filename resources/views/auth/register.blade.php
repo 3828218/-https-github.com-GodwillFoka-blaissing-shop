@@ -14,7 +14,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <link href="{{ asset('assets/styleAdmin.css') }}" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="{{asset('assets/images/ks3.png')}}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/ks3.png') }}">
 </head>
 
 <body>
@@ -37,27 +37,32 @@
                                         @csrf
                                         <div class="form-row">
                                             <div class="col-md-12">
+                                                <div class="position-relative form-group"><input
+                                                        name="image" id="image"
+                                                        required type="file"  accept=".png, .jpg, .jpeg, .bmp, .gif" id="image"
+                                                        class="form-control"></div>
+                                            </div>
+                                            <div class="col-md-12">
                                                 <div class="position-relative form-group"><input name="name"
-                                                        id="exampleName" placeholder="Nom Complet" type="name"
-                                                        required autofocus class="form-control">
+                                                        id="exampleName" placeholder="Nom Complet" type="name" required
+                                                        autofocus class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group"><input name="email"
-                                                        id="exampleEmail" placeholder="Email" type="email"
-                                                        required class="form-control">
+                                                        id="exampleEmail" placeholder="Email" type="email" required
+                                                        class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group"><input name="password"
                                                         id="examplePassword" placeholder="Mot De Passe" required
-                                                        type="password"
-                                                        class="form-control"></div>
+                                                        type="password" class="form-control"></div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="position-relative form-group"><input name="password_confirmation"
-                                                        id="examplePasswordConfirmation" placeholder="Confirmation Mot De Passe" required
-                                                        type="password"
+                                                <div class="position-relative form-group"><input
+                                                        name="password_confirmation" id="examplePasswordConfirmation"
+                                                        placeholder="Confirmation Mot De Passe" required type="password"
                                                         class="form-control"></div>
                                             </div>
                                         </div>

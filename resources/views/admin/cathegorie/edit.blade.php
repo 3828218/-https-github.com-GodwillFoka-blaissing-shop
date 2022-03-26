@@ -24,7 +24,7 @@
                             {{ method_field('PATCH') }}
                             {{ csrf_field() }}
 
-                            @include ('admin.cathegorie.form', ['formMode' => 'edit'])
+                            @include ('admin.cathegorie.form', ['formMode' => 'Modifer'])
 
                         </form>
 

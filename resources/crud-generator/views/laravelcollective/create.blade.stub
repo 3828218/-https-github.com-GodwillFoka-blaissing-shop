@@ -23,7 +23,7 @@
 
                         {!! Form::open(['url' => '/%%routeGroup%%%%viewName%%', 'class' => 'form-horizontal', 'files' => true]) !!}
 
-                        @include ('%%viewTemplateDir%%.form', ['formMode' => 'create'])
+                        @include ('%%viewTemplateDir%%.form', ['formMode' => 'Ajouter'])
 
                         {!! Form::close() !!}
 

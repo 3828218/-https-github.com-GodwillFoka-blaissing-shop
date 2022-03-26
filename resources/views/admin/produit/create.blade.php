@@ -23,7 +23,7 @@
                         <form method="POST" action="{{ url('/admin/produit') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
-                            @include ('admin.produit.form', ['formMode' => 'create'])
+                            @include ('admin.produit.form', ['formMode' => 'Ajouter'])
 
                         </form>
 

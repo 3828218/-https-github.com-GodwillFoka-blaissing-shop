@@ -1,3 +1,8 @@
+<div class="form-group {{ $errors->has('image') ? 'has-error' : ''}}">
+    <label for="image" class="control-label">{{ 'Image' }}</label>
+    <input class="form-control" name="image" type="file" accept=".png, .jpg, .jpeg, .bmp, .gif" id="image" value="{{ isset($produit->image) ? $produit->image : ''}}" required>
+    {!! $errors->first('image', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group {{ $errors->has('nom') ? 'has-error' : ''}}">
     <label for="nom" class="control-label">{{ 'Nom' }}</label>
     <input class="form-control" name="nom" type="text" id="nom" value="{{ isset($produit->nom) ? $produit->nom : ''}}" required>
@@ -18,8 +23,16 @@
     {!! $errors->first('descrition', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('cathegorie_id') ? 'has-error' : ''}}">
-    <label for="cathegorie_id" class="control-label">{{ 'Cathegorie Id' }}</label>
-    <input class="form-control" name="cathegorie_id" type="number" id="cathegorie_id" value="{{ isset($produit->cathegorie_id) ? $produit->cathegorie_id : ''}}" >
+    <label for="cathegorie_id" class="control-label">{{ 'Catégorie' }}</label>
+    <select  class="form-control" name="cathegorie_id" id="cathegorie_id"  required>
+        <option disabled selected>Selectionner une Cathégorie</option>
+        @forelse ($cathegorie as $item)
+        <option value="{{$item->id}}" {{ (isset($produit->cathegorie_id) && $produit->cathegorie_id == $item->id) ? 'selected' : ''}}>{{ $item->nom }}</option>
+        @empty
+        <option disabled>Aucune Catégorie</option>
+
+        @endforelse
+    </select>
     {!! $errors->first('cathegorie_id', '<p class="help-block">:message</p>') !!}
 </div>
 

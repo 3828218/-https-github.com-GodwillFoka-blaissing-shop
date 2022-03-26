@@ -2,7 +2,7 @@
     <li class="app-sidebar__heading">Menu</li>
     <li>
         <a href="index.html#">
-            <i class="metismenu-icon pe-7s-rocket"></i>
+            <i class="metismenu-icon pe-7s-shopbag"></i>
             Produits
             <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
         </a>
@@ -23,7 +23,7 @@
     </li>
     <li>
         <a href="index.html#">
-            <i class="metismenu-icon pe-7s-rocket"></i>
+            <i class="metismenu-icon pe-7s-way"></i>
             Catégorie
             <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
         </a>
@@ -38,6 +38,27 @@
                 <a href="{{url('admin/cathegorie')}}">
                     <i class="metismenu-icon">
                     </i>Consulter liste catégories
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="index.html#">
+            <i class="metismenu-icon pe-7s-users"></i>
+            Utilisateurs
+            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+        </a>
+        <ul>
+            <li>
+                <a href="{{url('admin/user/create')}}">
+                    <i class="metismenu-icon">
+                    </i>Ajouter un utilisateur
+                </a>
+            </li>
+            <li>
+                <a href="{{url('admin/user')}}">
+                    <i class="metismenu-icon">
+                    </i>Consulter liste des utilisateurs
                 </a>
             </li>
         </ul>

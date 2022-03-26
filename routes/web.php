@@ -21,9 +21,10 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'App\Http\Controllers\Admin\ProduitController@listing');
+
+
 Route::group(['middleware' => ['auth']] ,function(){
     Route::group(['prefix'=>'/admin'], function(){
         Route::group(['prefix'=>'/produit'], function(){
@@ -45,13 +46,14 @@ Route::group(['middleware' => ['auth']] ,function(){
             Route::get('/{id}', 'App\Http\Controllers\Admin\CathegorieController@show');
             Route::get('/', 'App\Http\Controllers\Admin\CathegorieController@index');
         });
+
+        Route::group(['prefix'=>'/user'], function(){
+            Route::post('/', 'App\Http\Controllers\Admin\UserController@store');
+            Route::get('/create', 'App\Http\Controllers\Admin\UserController@create');
+            Route::get('/{id}/edit', 'App\Http\Controllers\Admin\UserController@edit');
+            Route::patch('/{id}', 'App\Http\Controllers\Admin\UserController@update');
+            Route::delete('/{id}', 'App\Http\Controllers\Admin\UserController@destroy');
+            Route::get('/', 'App\Http\Controllers\Admin\UserController@index');
+        });
     });
 });
-
-
-// Route::resource('admin/cathegorie', 'App\Http\Controllers\Admin\CathegorieController');
-// Route::resource('admin/produit', 'App\Http\Controllers\Admin\ProduitController');
-
-
-Route::resource('admin/produit', 'App\Http\Controllers\Admin\ProduitController');
-Route::resource('admin/produit', 'App\Http\Controllers\Admin\ProduitController');
