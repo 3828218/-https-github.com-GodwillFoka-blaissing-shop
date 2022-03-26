@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
 
 class Produit extends Model
@@ -27,12 +26,7 @@ class Produit extends Model
      *
      * @var array
      */
-    protected $fillable = ['nom', 'etat', 'descrition','image', 'cathegorie_id'];
-
-    public function cathegorie()
-    {
-        return $this->belongsTo('App\Models\Cathegorie');
-    }
+    protected $fillable = ['image', 'nom', 'categorie', 'descrition', 'etat'];
 
     public function getImageAttribute($value) {
         return $value ? url(Storage::url($value)) : $value;

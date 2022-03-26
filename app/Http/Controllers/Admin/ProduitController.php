@@ -4,18 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
-use App\Models\Cathegorie;
+
 use App\Models\Produit;
 use Illuminate\Http\Request;
 
 class ProduitController extends Controller
 {
-
-    public function listing()
-    {
-        $produits = Produit::all();
-        return view('welcome', compact('produits'));
-    }
     /**
      * Display a listing of the resource.
      *
@@ -27,13 +21,14 @@ class ProduitController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $produit = Produit::where('nom', 'LIKE', "%$keyword%")
-                ->orWhere('etat', 'LIKE', "%$keyword%")
+            $produit = Produit::where('image', 'LIKE', "%$keyword%")
+                ->orWhere('nom', 'LIKE', "%$keyword%")
+                ->orWhere('categorie', 'LIKE', "%$keyword%")
                 ->orWhere('descrition', 'LIKE', "%$keyword%")
-                ->with('cathegorie')
+                ->orWhere('etat', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
-            $produit = Produit::with('cathegorie')->latest()->paginate($perPage);
+            $produit = Produit::latest()->paginate($perPage);
         }
 
         return view('admin.produit.index', compact('produit'));
@@ -46,8 +41,7 @@ class ProduitController extends Controller
      */
     public function create()
     {
-        $cathegorie = Cathegorie::all();
-        return view('admin.produit.create', compact('cathegorie'));
+        return view('admin.produit.create');
     }
 
     /**
@@ -61,15 +55,15 @@ class ProduitController extends Controller
     {
         $this->validate($request, [
 			'nom' => 'required',
-			'etat' => 'required',
 			'image' => 'required',
-			'cathegorie_id' => 'required'
+			'etat' => 'required',
+			'categorie' => 'required'
 		]);
-        if ($request->hasFile('image')) {
+        $requestData = $request->all();
+                if ($request->hasFile('image')) {
             $requestData['image'] = $request->file('image')
                 ->store('uploads', 'public');
         }
-        $requestData = $request->all();
 
         Produit::create($requestData);
 
@@ -100,9 +94,8 @@ class ProduitController extends Controller
     public function edit($id)
     {
         $produit = Produit::findOrFail($id);
-        $cathegorie = Cathegorie::all();
 
-        return view('admin.produit.edit', compact('produit', 'cathegorie'));
+        return view('admin.produit.edit', compact('produit'));
     }
 
     /**
@@ -117,14 +110,15 @@ class ProduitController extends Controller
     {
         $this->validate($request, [
 			'nom' => 'required',
+			'image' => 'required',
 			'etat' => 'required',
-			'cathegorie_id' => 'required'
+			'categorie' => 'required'
 		]);
-        if ($request->hasFile('image')) {
+        $requestData = $request->all();
+                if ($request->hasFile('image')) {
             $requestData['image'] = $request->file('image')
                 ->store('uploads', 'public');
         }
-        $requestData = $request->all();
 
         $produit = Produit::findOrFail($id);
         $produit->update($requestData);

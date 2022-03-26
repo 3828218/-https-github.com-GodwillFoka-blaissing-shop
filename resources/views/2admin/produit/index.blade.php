@@ -1,45 +1,36 @@
 @extends('dashboard')
 
 @section('content')
-    <div class="app-page-title">
-        <div class="page-title-wrapper">
-            <div class="page-title-heading">
-                <div class="page-title-icon">
-                    <i class="metismenu-icon pe-7s-users" width="100%"></i>
-                </div>
-                <div>Liste des Produits
-                </div>
-            </div>
-            <div class="page-title-actions">
-                <form method="GET" action="{{ url('/admin/produit') }}" accept-charset="UTF-8"
-                    class="form-inline my-2 my-lg-0 float-right" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="search" placeholder="Search..."
-                            value="{{ request('search') }}">
-                        <span class="input-group-append">
-                            <button class="btn btn-secondary" type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </span>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-card mb-3 card">
+                    <div class="card-header"><div style="margin-right: 30px;">Liste de tous les produits</div>
+                        <div class="btn-actions-pane-left">
+                            <div role="group" class="btn-group-sm btn-group">
+                                <a href="{{ url('/admin/produit/create') }}" class="btn btn-success btn-sm"
+                                    title="Add New Produit">
+                                    <i class="fa fa-plus" aria-hidden="true"></i> Ajouter
+                                </a>
+                            </div>
+                        </div>
+                        <div class="btn-actions-pane-right">
+                            <div role="group" class="btn-group-sm btn-group">
+                                <form method="GET" action="{{ url('/admin/produit') }}" accept-charset="UTF-8"
+                                    class="form-inline my-2 my-lg-0 float-right" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="search" placeholder="Search..."
+                                            value="{{ request('search') }}">
+                                        <span class="input-group-append">
+                                            <button class="btn btn-secondary" type="submit">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </form>
-            </div>
-            <div class="page-title-actions">
-                <a href="{{ url('/admin/produit/create') }}" aria-haspopup="true" aria-expanded="false"
-                    class="btn-shadow btn btn-success">
-                    <span class="btn-icon-wrapper pr-2 opacity-7">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </span>
-                    Ajouter
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-12">
-        <div class="main-card mb-3 card">
-            <div class="card-body">
-                <h5 class="pb-2 card-title">Headers</h5>
-                <div class="row">
                     <div class="table-responsive">
                         <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                             <thead>
@@ -55,7 +46,7 @@
                                 @foreach ($produit as $item)
                                     <tr>
                                         <td class="text-center text-muted">{{ $loop->iteration }}</td>
-                                        <td class="text-center"><img src="{{ $item->image }}" width="100px;" alt=""></td>
+                                        <td class="text-center">{{ $item->image }}</td>
                                         <td>
                                             <div class="widget-content p-0">
                                                 <div class="widget-content-wrapper">
@@ -77,12 +68,11 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="text-center">{{ $item->categorie }}</td>
+                                        <td class="text-center">{{ $item->cathegorie->nom }}</td>
                                         <td class="text-center">
                                             <a href="{{ url('/admin/produit/' . $item->id) }}"
                                                 title="View Produit"><button class="btn btn-info btn-sm"><i
-                                                        class="fa fa-eye" aria-hidden="true"></i>
-                                                    View</button></a>
+                                                        class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/admin/produit/' . $item->id . '/edit') }}"
                                                 title="Edit Produit"><button class="btn btn-primary btn-sm"><i
                                                         class="fa fa-pencil-square-o" aria-hidden="true"></i>

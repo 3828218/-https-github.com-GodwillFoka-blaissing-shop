@@ -37,16 +37,6 @@ Route::group(['middleware' => ['auth']] ,function(){
             Route::get('/', 'App\Http\Controllers\Admin\ProduitController@index');
         });
 
-        Route::group(['prefix'=>'/cathegorie'], function(){
-            Route::post('/', 'App\Http\Controllers\Admin\CathegorieController@store');
-            Route::get('/create', 'App\Http\Controllers\Admin\CathegorieController@create');
-            Route::get('/{id}/edit', 'App\Http\Controllers\Admin\CathegorieController@edit');
-            Route::patch('/{id}', 'App\Http\Controllers\Admin\CathegorieController@update');
-            Route::delete('/{id}', 'App\Http\Controllers\Admin\CathegorieController@destroy');
-            Route::get('/{id}', 'App\Http\Controllers\Admin\CathegorieController@show');
-            Route::get('/', 'App\Http\Controllers\Admin\CathegorieController@index');
-        });
-
         Route::group(['prefix'=>'/user'], function(){
             Route::post('/', 'App\Http\Controllers\Admin\UserController@store');
             Route::get('/create', 'App\Http\Controllers\Admin\UserController@create');

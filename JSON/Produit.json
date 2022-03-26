@@ -1,8 +1,25 @@
 {
     "fields": [
         {
+            "name": "image",
+            "type": "file"
+        },
+        {
             "name": "nom",
             "type": "string"
+        },
+        {
+            "name": "categorie",
+            "type": "select",
+            "options": {
+                "Style Homme": "Style Homme",
+                "Style Femme": "Style Femme",
+                "Style Enfant": "Style Enfant"
+            }
+        },
+        {
+            "name": "descrition",
+            "type": "text"
         },
         {
             "name": "etat",
@@ -12,29 +29,6 @@
                 "Solde": "Solde",
                 "Stock Epuisé": "Stock Epuisé"
             }
-        },
-        {
-            "name": "descrition",
-            "type": "text"
-        },
-        {
-            "name": "cathegorie_id",
-            "type": "integer#unsigned"
-        }
-    ],
-    "foreign_keys": [
-        {
-            "column": "cathegorie_id",
-            "references": "id",
-            "on": "cathegories",
-            "onDelete": "cascade"
-        }
-    ],
-    "relationships": [
-        {
-            "name": "cathegorie",
-            "type": "belongsTo",
-            "class": "App\\Models\\Cathegorie"
         }
     ],
     "validations": [
@@ -43,11 +37,15 @@
             "rules": "required"
         },
         {
+            "field": "image",
+            "rules": "required"
+        },
+        {
             "field": "etat",
             "rules": "required"
         },
         {
-            "field": "categorie_id",
+            "field": "categorie",
             "rules": "required"
         }
     ]
