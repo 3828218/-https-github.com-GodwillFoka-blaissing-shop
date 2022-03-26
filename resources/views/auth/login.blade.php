@@ -14,7 +14,7 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <link href="{{ asset('assets/styleAdmin.css') }}" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="{{asset('assets/images/ks3.png')}}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/ks3.png') }}">
 </head>
 
 <body>
@@ -33,6 +33,15 @@
                                             <span>S'il vous plait reseingez vos paramètres de connection</span>
                                         </h4>
                                     </div>
+
+                                    @if ($errors->any())
+                                        <ul class="alert alert-danger">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+
                                     <form method="POST" action="{{ route('login') }}">
                                         @csrf
                                         <div class="form-row">
