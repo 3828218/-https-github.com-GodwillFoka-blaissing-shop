@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Addresse Mail inexistant.',
+    'failed' => 'Addresse Mail Ou Compte inexistant.',
     'password' => 'Le mot de passe est incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 

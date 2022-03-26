@@ -33,7 +33,8 @@
     <input onkeyup="test()" class="form-control" name="password" type="password" id="repassword">
     {!! $errors->first('password', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group">
+<div class="form-group text-center">
+    <div class="text-danger"><i>Rassurez vous que les deux mots de passe soient correct pour pouvoir valider</i></div>
     <input class="btn btn-primary" disabled id="button" type="submit" value="{{ $formMode === 'Modifer' ? 'Modifer' : 'Ajouter' }}">
 </div>
 
