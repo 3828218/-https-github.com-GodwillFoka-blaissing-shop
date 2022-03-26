@@ -42,7 +42,7 @@
                                     <div class="avatar-icon-wrapper mb-3 avatar-icon-xl">
                                         <div class="avatar-icon">
                                             @if ($item->image)
-                                                <img src="assets/images/avatars/2.jpg" alt="Avatar 5">
+                                                <img src="{{ $item->image }}" alt="Avatar 5">
                                             @else
                                                 <i class="metismenu-icon pe-7s-users" width="100%"></i>
                                             @endif
@@ -77,7 +77,7 @@
                                     <div class="avatar-icon-wrapper mb-3 avatar-icon-xl">
                                         <div class="avatar-icon">
                                             @if ($item->image)
-                                                <img src="assets/images/avatars/2.jpg" alt="Avatar 5">
+                                                <img src="{{ $item->image }}" alt="Avatar 5">
                                             @else
                                                 <i class="metismenu-icon pe-7s-users" width="100%"></i>
                                             @endif
