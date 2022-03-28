@@ -47,7 +47,7 @@
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div class="position-relative form-group"><input name="email"
-                                                        id="exampleEmail" placeholder="Email" type="email"
+                                                        id="email" placeholder="Email" type="email"
                                                         :value="old('email')" required autofocus class="form-control">
                                                 </div>
                                                 @error('email')

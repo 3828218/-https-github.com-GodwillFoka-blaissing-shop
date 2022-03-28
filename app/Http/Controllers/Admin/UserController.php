@@ -46,9 +46,10 @@ class UserController extends Controller
             'password' => 'required',
             'email' => 'required|email|unique:users,email'
         ]);
-        $request['password'] = bcrypt($request['password']);
 
         $requestData = $request->all();
+
+        $requestData['password'] = bcrypt($request['password']);
 
         if ($request->hasFile('image')) {
             $requestData['image'] = $request->file('image')
@@ -86,8 +87,11 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|email'
         ]);
-        
+
         $requestData = $request->all();
+
+
+        $requestData['password'] = bcrypt($request['password']);
 
         if ($request->hasFile('image')) {
             $requestData['image'] = $request->file('image')

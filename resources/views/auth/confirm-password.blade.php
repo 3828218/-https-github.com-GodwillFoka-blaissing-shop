@@ -1,36 +1,75 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!doctype html>
+<html lang="en">
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Kollin'Shop | Administration</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="ArchitectUI HTML Bootstrap 4 Dashboard Template">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="{{ asset('assets/styleAdmin.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/ks3.png') }}">
+</head>
+
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow">
+        <div class="app-container">
+            <div class="h-100 bg-plum-plate bg-animation">
+                <div class="d-flex h-100 justify-content-center align-items-center">
+                    <div class="mx-auto app-login-box col-md-8">
+                        <div class="app-logo-inverse mx-auto mb-3"></div>
+                        <div class="modal-dialog w-100 mx-auto">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="h5 modal-title text-center">
+                                        <h4 class="mt-2">
+                                            <div>Bienvenu Sur La Partie D'administration</div>
+                                            <span>Ceci est une partie sécurisé de l'application. S'il vous plait confirmez votre mot de passe avant de continuer</span>
+                                        </h4>
+                                    </div>
+
+                                    @if ($errors->any())
+                                        <ul class="alert alert-danger">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+
+                                    <form method="POST" action="{{ route('password.confirm') }}">
+                                        @csrf
+                                        <div class="form-row">
+                                            <div class="col-md-12">
+                                                <div class="position-relative form-group"><input name="password"
+                                                        placeholder="Password" required
+                                                        autocomplete="current-password" type="password"
+                                                        class="form-control"></div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer clearfix">
+                                            <div class="float-right">
+                                                <button type="submit"
+                                                    class="btn btn-primary btn-lg">{{ __('Continuer') }}</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center text-white opacity-8 mt-3">Fait Par <a style="color: white"
+                                href="https:::wa.me/+237691424882"><b>Mc Compagny</b></a> 2022 </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <script type="text/javascript" src="{{ asset('assets/scriptAdmin.js') }}"></script>
+</body>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('password.confirm') }}">
-            @csrf
-
-            <!-- Password -->
-            <div>
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-            </div>
-
-            <div class="flex justify-end mt-4">
-                <x-button>
-                    {{ __('Confirm') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+</html>
