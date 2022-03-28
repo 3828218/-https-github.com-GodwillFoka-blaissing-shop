@@ -122,7 +122,7 @@
                                     <div class="page-title-icon">
                                         <img src="{{ asset('assets/images/ks3.png') }}" width="100%" alt="">
                                     </div>
-                                    <div>KOLLIN'SHOP
+                                    <div>
                                         <div class="page-title-subheading">Mon vêtement, Ma marque
                                         </div>
                                     </div>
