@@ -47,3 +47,5 @@ Route::group(['middleware' => ['auth']] ,function(){
         });
     });
 });
+
+Route::resource('admin/user', 'App\Http\Controllers\Admin\UserController');

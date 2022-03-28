@@ -38,10 +38,9 @@
     <div class="col-md-12">
         <div class="main-card mb-3 card">
             <div class="card-body">
-                <h5 class="pb-2 card-title">Headers</h5>
                 <div class="row">
                     <div class="table-responsive">
-                        <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                        <table style="width: 100%;" id="example" class="table table-hover table-striped table-bordered">
                             <thead>
                                 <tr>
                                     <th class="text-center">#</th>

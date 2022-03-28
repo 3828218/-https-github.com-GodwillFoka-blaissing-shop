@@ -1,7 +1,30 @@
 {
     "fields": [
         {
-            "name": "nom",
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "email",
+            "type": "email"
+        },
+        {
+            "name": "image",
+            "type": "file"
+        },{
+            "name": "numero",
+            "type": "string"
+        },
+        {
+            "name": "email_verified_at",
+            "type": "email"
+        },
+        {
+            "name": "password",
+            "type": "password"
+        },
+        {
+            "name": "remember_token",
             "type": "string"
         },
         {
@@ -11,7 +34,15 @@
     ],
     "validations": [
         {
-            "field": "nom",
+            "field": "name",
+            "rules": "required"
+        },
+        {
+            "field": "email",
+            "rules": "required"
+        },
+        {
+            "field": "password",
             "rules": "required"
         }
     ]

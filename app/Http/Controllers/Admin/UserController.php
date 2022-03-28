@@ -42,16 +42,18 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'name' => 'required',
-			'password' => 'required',
-			'email' => 'required|email|unique:users,email'
-		]);
+            'name' => 'required',
+            'password' => 'required',
+            'email' => 'required|email|unique:users,email'
+        ]);
+        $request['password'] = bcrypt($request['password']);
+
+        $requestData = $request->all();
+
         if ($request->hasFile('image')) {
             $requestData['image'] = $request->file('image')
                 ->store('uploads', 'public');
         }
-        $request['password'] = bcrypt( $request['password']);
-        $requestData = $request->all();
 
         User::create($requestData);
 
@@ -81,14 +83,16 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-			'name' => 'required',
-			'email' => 'required|email'
-		]);
+            'name' => 'required',
+            'email' => 'required|email'
+        ]);
+        
+        $requestData = $request->all();
+
         if ($request->hasFile('image')) {
             $requestData['image'] = $request->file('image')
                 ->store('uploads', 'public');
         }
-        $requestData = $request->all();
 
         $user = User::findOrFail($id);
         $user->update($requestData);

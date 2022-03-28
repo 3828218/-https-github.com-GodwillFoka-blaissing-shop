@@ -40,12 +40,12 @@
                             <div class="dropdown-menu-header-inner bg-primary">
                                 <div class="menu-header-content">
                                     <div class="avatar-icon-wrapper mb-3 avatar-icon-xl">
-                                        <div class="avatar-icon">{{ $item->image }}
-                                            {{-- @if ($item->image)
-                                                <img src="{{ $item->image }}" alt="Avatar 5">
-                                            @else
-                                                <i class="metismenu-icon pe-7s-users" width="100%"></i>
-                                            @endif --}}
+                                        <div class="avatar-icon">
+                                            @if ($item->image)
+                                                <img src="{{ $item->image }}" alt="{{ $item->image }}">
+                                                @else
+                                                <img src="{{asset('assets/images/users.png')}}" alt="{{ $item->image }}">
+                                            @endif
                                         </div>
                                     </div>
                                     <div>
