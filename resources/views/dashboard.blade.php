@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="fr">
 
 <head>
@@ -8,74 +7,96 @@
     <title>Kollin'Shop | Administration</title>
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="description" content="ArchitectUI HTML Bootstrap 4 Dashboard Template">
 
-    <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <link href="{{ asset('assets/styleAdmin.css') }}" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="{{asset('assets/images/ks3.png')}}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/ks3.png') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="{{ asset('Admin/plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('Admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('Admin/dist/css/adminlte.min.css') }}">
 </head>
 
-<body>
-    <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
-        <div class="app-header header-shadow">
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             @include('layouts.headSideBar')
-        </div>
-        <div class="app-main">
-            <div class="app-sidebar sidebar-shadow">
-                <div class="app-header__logo">
-                    <div class="logo-src"></div>
-                    <div class="header__pane ml-auto">
-                        <div>
-                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
-                                data-class="closed-sidebar">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
+        </nav>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="{{ url('/') }}" class="brand-link">
+                <img src="{{ asset('assets/images/ks3.png') }}" alt="AdminLTE Logo"
+                    class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light"><b>Kollin'Shop</b></span>
+            </a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="{{ Auth::user()->image }}" class="img-circle elevation-3"
+                            style="height: 35px; width: 30px;" alt="{{ Auth::user()->name }}">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block"><b><i>{{ Auth::user()->name }}</i></b></a>
+                    </div>
+                </div>
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        @include('layouts.leftSidebar')
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+
+        <div class="content-wrapper">
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <main class="py-4">
+                                @yield('content')
+                            </main>
                         </div>
                     </div>
                 </div>
-                <div class="app-header__mobile-menu">
-                    <div>
-                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <div class="app-header__menu">
-                    <span>
-                        <button type="button"
-                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                            <span class="btn-icon-wrapper">
-                                <i class="fa fa-ellipsis-v fa-w-6"></i>
-                            </span>
-                        </button>
-                    </span>
-                </div>
-                <div class="scrollbar-sidebar">
-                    <div class="app-sidebar__inner">
-                        @include('layouts.leftSidebar')
-                    </div>
-                </div>
-            </div>
-            {{-- ****************/Header******************** --}}
-            <div class="app-main__outer">
-                <div class="app-main__inner">
-                    <main class="py-4">
-                        @yield('content')
-                    </main>
-                </div>
-                <div class="app-wrapper-footer">
-                    @include('layouts.footerSideBar')
-                </div>
-            </div>
+            </section>
         </div>
+        @include('layouts.footerSideBar')
     </div>
-    <script type="text/javascript" src="{{ asset('assets/scriptAdmin.js') }}"></script>
+
+    <div class="modal fade" id="modal-default">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p><img width="42" class="rounded-circle" src="{{ Auth::user()->image }}" alt=""></p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+    <script src="{{ asset('Admin/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('Admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('Admin/dist/js/adminlte.min.js') }}"></script>
+    <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('plugins/toastr/toastr.min.js') }}"></script>
+    <script src="{{ asset('dist/js/demo.js') }}"></script>
+
 </body>
 
 </html>
