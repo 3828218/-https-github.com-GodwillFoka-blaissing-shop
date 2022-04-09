@@ -45,12 +45,13 @@
                     @foreach ($produit as $item)
                         <tr>
                             <td class="text-center text-muted">{{ $loop->iteration }}</td>
-                            <td class="text-center">{{ $item->image }}
-                                {{-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-xl">
+                            {{-- <td class="text-center">{{ $item->image }} --}}
+                                <td class="text-center">
+                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-xl">
                                     <img class="taille2" style="border-radius: 80px; border: solid"
                                         src="{{ $item->image }}" alt="{{ $item->nom }}" width="50px" height="50px"
                                         data-toggle="modal" data-target="#exampleModal" id="myImg" />
-                                </button> --}}
+                                </button>
                             <td>
                                 <div class="widget-content p-0">
                                     <div class="widget-content-wrapper">

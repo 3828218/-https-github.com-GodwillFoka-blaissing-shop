@@ -176,12 +176,12 @@
                                             <div class="card-body">
                                                 <h5 class="card-title">Style Homme</h5>
                                                 <div class="slick-slider-variable">
-                                                    {{-- @foreach ($produits as $item)
+                                                    @foreach ($produits as $item)
                                                         <div>
-                                                            <div class="dropdown-menu-header slider-item">
-                                                                <div class="dropdown-menu-header-inner bg-amy-crisp">
-                                                                    <div class="menu-header-image"
-                                                                        style="background-image: url('assets/images/sidebar/abstract3.jpg');">
+                                                            <div class="dropdown-menu-header slider-item"  style="width: 350px; height: 300px;">
+                                                                <div class="dropdown-menu-header-inner">
+                                                                    <div class="menu-header-image">
+                                                                        <img src="{{ $item->image }}" alt="">
                                                                     </div>
                                                                     <div class="menu-header-content">
                                                                         <div>
@@ -198,7 +198,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    @endforeach --}}
+                                                    @endforeach
                                                     <div>
                                                         <div class="slider-item" style="width: 100px">
                                                             <p>100</p>
